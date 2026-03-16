@@ -12,6 +12,9 @@ The autograder will run your tests as part of the CI check.
 import pandas as pd
 import numpy as np
 import pytest
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from pipeline import load_data, clean_data, add_features
 
 def test_load_data_returns_dataframe():
